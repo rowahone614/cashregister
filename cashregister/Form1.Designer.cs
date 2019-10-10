@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.muttonAmount = new System.Windows.Forms.NumericUpDown();
             this.wineAmount = new System.Windows.Forms.NumericUpDown();
             this.tartAmount = new System.Windows.Forms.NumericUpDown();
@@ -320,8 +321,9 @@
             this.Controls.Add(this.tartAmount);
             this.Controls.Add(this.wineAmount);
             this.Controls.Add(this.muttonAmount);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "RH - Cash Register";
             ((System.ComponentModel.ISupportInitialize)(this.muttonAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wineAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tartAmount)).EndInit();
