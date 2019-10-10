@@ -11,7 +11,8 @@ using System.Threading;
 using System.Media;
 
 namespace cashregister
-{
+{        //Rowan Honeywell - ICS3U
+        //10/10/19 - Cash Register Program
     public partial class Form1 : Form
     {
         const double MUTTON_PRICE = 22.75;
@@ -29,6 +30,8 @@ namespace cashregister
         double totalinTart;
         double tenderAmount;
         double changeAmount;
+
+
 
         public Form1()
         {
@@ -72,46 +75,54 @@ namespace cashregister
                 }
 
         }
-
-
-
         private void PrintButton_Click(object sender, EventArgs e)
         {
+            //receipt elements
             Graphics g = receiptOutPut.CreateGraphics();
             Font receiptFont = new Font("Courier New", 10);
             SolidBrush blackBrush = new SolidBrush(Color.Black);
             SoundPlayer printSound = new SoundPlayer(Properties.Resources.printSound);
 
+            //drawing receipt graphics
             g.DrawString("Leg of Mutton x " + muttonNumber + " ... " + totalinMutton.ToString("C"), receiptFont, blackBrush, 0, 0);
             printSound.Play();
             Thread.Sleep(450);
+
             g.DrawString("Gluehwein x " + gluehweinNumber + " ....... " + totalinGluehwein.ToString("C"), receiptFont, blackBrush, 0, 20);
             Thread.Sleep(450);
+
             g.DrawString("Melon Tart x " + tartNumber + " ...... " + totalinTart.ToString("C"), receiptFont, blackBrush, 0, 40);
             Thread.Sleep(450);
+
             g.DrawString("Subtotal ............ " + subTotalValue.ToString("C"), receiptFont, blackBrush, 0, 80);
             printSound.Play();
             Thread.Sleep(450);
+
             g.DrawString("Tax Value ........... " + taxationValue.ToString("C"), receiptFont, blackBrush, 0, 100);
             Thread.Sleep(450);
+
             g.DrawString("Grand Total ......... " + grandTotalValue.ToString("C"), receiptFont, blackBrush, 0, 120);
             Thread.Sleep(450);
+
             g.DrawString("Amount Tendered ..... " + tenderAmount.ToString("C"), receiptFont, blackBrush, 0, 160);
             printSound.Play();
             Thread.Sleep(450);
+
             g.DrawString("Returned Change ..... " + changeAmount.ToString("C"), receiptFont, blackBrush, 0, 180);
             Thread.Sleep(450);
             g.DrawString("Thank Thou, Squire!", receiptFont, blackBrush, 40, 220);
             Thread.Sleep(450);
+
             g.DrawString("Good Morrow!", receiptFont, blackBrush, 65, 240);
             Thread.Sleep(450);
+
             g.DrawString("519-246-9420", receiptFont, blackBrush, 64, 260);
             
 
         }
-
         private void NewButton_Click(object sender, EventArgs e)
         {
+            //setting all variables, strings, and labels to 0
             Graphics r = receiptOutPut.CreateGraphics();
             r.Clear(Color.White);
             muttonAmount.Value = 0;
