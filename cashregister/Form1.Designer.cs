@@ -173,7 +173,7 @@
             this.feastButton.TabIndex = 11;
             this.feastButton.Text = "Feast!";
             this.feastButton.UseVisualStyleBackColor = false;
-            this.feastButton.Click += new System.EventHandler(this.Button1_Click);
+            this.feastButton.Click += new System.EventHandler(this.FeastButton_Click);
             // 
             // taxLabel
             // 

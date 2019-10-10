@@ -38,9 +38,8 @@ namespace cashregister
             InitializeComponent();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void FeastButton_Click(object sender, EventArgs e)
         {
-           
             //numerical up-down conversions
             muttonNumber = Convert.ToDouble(muttonAmount.Value);
             gluehweinNumber = Convert.ToDouble(wineAmount.Value);
@@ -139,6 +138,8 @@ namespace cashregister
             tenderValue.Text = "";
             changeValue.Text = "";
         }
+
+
     }
     
 }
